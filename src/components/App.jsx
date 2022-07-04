@@ -11,9 +11,8 @@ export class App extends Component {
     bad: 0
   }
 
-  onLeaveFeedback = event => {
-    const { name } = event.currentTarget;
-    this.setState(prevState => ({ [name]: prevState[name] + 1 }));
+  onLeaveFeedback = option => {
+    this.setState(prevState => ({ [option]: prevState[option] + 1 }));
   };
 
   countTotalFeedback() {
